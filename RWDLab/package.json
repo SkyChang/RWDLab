@@ -1,0 +1,21 @@
+{
+  "name": "sky",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "angular": "^1.4.1",
+    "angular-animate": "^1.4.1",
+    "angular-aria": "^1.4.1",
+    "angular-material": "^0.10.0"
+  },
+  "devDependencies": {
+    "cssnext": "^1.8.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "buildcss": ".\\node_modules\\.bin\\cssnext .\\Content\\Style.css .\\Content\\styleBuild.css"
+  }, //npm run buildcss
+  "author": "",
+  "license": "ISC"
+}

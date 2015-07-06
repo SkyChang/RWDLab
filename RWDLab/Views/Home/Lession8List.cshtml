@@ -1,0 +1,32 @@
+﻿<!-- 輸入以下字串 -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-2">
+            Search: <input ng-model="query.$"> <br>
+            Search Date :<input ng-model="query.date"><br>
+            Search Name :<input ng-model="query.name"><br>
+            And Search : <input type="checkbox" ng-model="strict"><br>
+            Sort:
+            <select ng-model="Predicate">
+                <option value="date">date</option>
+                <option value="name">name</option>
+            </select>
+
+            <select ng-model="reverseVale" ng-options="reverse.name for reverse in reverses"></select>
+        </div>
+        <div class="col-md-10">
+            <div class="row">
+                <div class="col-sm-6 col-md-4" ng-repeat="event in events | filter:query:strict | orderBy:Predicate:reverseVale.shade">
+                    <div class="thumbnail">
+                        <img ng-src="{{event.imgUrl}}" />
+                        <div class="caption">
+                            <h3><a href="#/events/{{event.id}}">{{event.date}}</a></h3>
+                            <p>{{event.name}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

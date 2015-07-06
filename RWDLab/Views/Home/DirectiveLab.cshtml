@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "DirectiveLab";
+}
+
+<h2>DirectiveLab</h2>
+
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+
+<div ng-app="directiveLabApp" ng-controller="directiveLab">
+    <tabs>
+        <pane title="Localization">
+            Date: {{ '2012-04-01' | date:'fullDate' }} <br>
+            Currency: {{ 123456 | currency }} <br>
+            Number: {{ 98765.4321 | number }} <br>
+        </pane>
+        <pane title="Pluralization">
+            <div>
+                <div ng-repeat="beerCount in beers">
+                    <ng-pluralize count="beerCount" when="beerForms"></ng-pluralize>
+                </div>
+            </div>
+        </pane>
+    </tabs>
+</div>
+
+@section Scripts{
+<script src="~/Scripts/app/DirectiveLab/directive-lab-app.js"></script>
+<script src="~/Scripts/app/DirectiveLab/Controllers/directive-lab-controller.js"></script>
+<script src="~/Scripts/app/DirectiveLab/Common/componets.js"></script>
+}

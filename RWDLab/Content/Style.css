@@ -1,0 +1,8 @@
+﻿    /*設定變數*/
+    :root {
+      --defaultPadingTop: 300px;
+    }
+
+    body {
+        padding-top: calc(var(--defaultPadingTop) * 2);
+    }

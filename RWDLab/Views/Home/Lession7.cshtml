@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AngularJS Demo</title>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <h1>Lession 5</h1>
+
+    <div ng-app="eventApp" ng-controller="EventListCtrl">
+        <!-- 輸入以下字串 -->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-2">
+                    Search: <input ng-model="query.$"> <br>
+                    Search Date :<input ng-model="query.date"><br>
+                    Search Name :<input ng-model="query.name"><br>
+                    And Search : <input type="checkbox" ng-model="strict"><br>
+                    Sort:
+                    <select ng-model="Predicate">
+                        <option value="date">date</option>
+                        <option value="name">name</option>
+                    </select>
+
+                    <select ng-model="reverseVale" ng-options="reverse.name for reverse in reverses"></select>
+                </div>
+                <div class="col-md-10">
+                    <div class="row" >
+                        <div class="col-sm-6 col-md-4" ng-repeat="event in events | filter:query:strict | orderBy:Predicate:reverseVale.shade">
+                            <div class="thumbnail">
+                                <img ng-src="{{event.imgUrl}}"/>
+                                <div class="caption">
+                                    <h3><a href="#/events/{{event.id}}">{{event.date}}</a></h3>
+                                    <p>{{event.name}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <script src="~/Scripts/jquery-2.1.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/angular.min.js"></script>
+    <script src="~/Scripts/app/event/controllers/eventListCtrl6.js"></script>
+</body>
+</html>

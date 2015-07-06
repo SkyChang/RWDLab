@@ -1,0 +1,57 @@
+@media screen and (min-width: 1200px) {
+    body {
+        /*padding-top: 50px;*/
+        padding-bottom: 20px;
+        padding-top: 50px;
+        /*運算*/
+        padding-top: 100px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 979px) {
+
+}
+
+@media screen and (max-width: 767px) {
+    /*如果使用者之視窗寬度 <= 768px，將會再載入這裡的 CSS。   */ 
+}
+
+@media screen and (max-device-width: 480px) {
+    /* 如果使用者之裝置寬度 <= 480px，將會再載入這裡的 CSS。 */
+}
+
+/*設定變數*/
+/*設定media*/
+
+@media screen and (min-width: 1200px) {
+    body {
+        /*padding-top: 50px;*/
+        padding-bottom: 20px;
+        padding-top: 50px;
+        /*運算*/
+        padding-top: 150px;
+    }
+}
+
+@media (min-width: 786px) and (max-width: 979px) {
+  body {
+        /*padding-top: 50px;*/
+        padding-bottom: 20px;
+        padding-top: 50px;
+        /*運算*/
+        padding-top: 1500px;
+    }
+}
+
+/*自訂選擇器*/
+
+body {
+   color:red;
+   color:rgba(255, 0, 0, 0.9);
+   color: rgb(51, 0, 0);
+   color: rgba(128, 255, 0, 0.5);
+   color: rgb(85, 85, 85);
+   color: rgba(26, 26, 26, 0.5);
+   color: rgba(153, 221, 153, 0.8); /*RRGGBBAA*/
+   color: rgb(102, 51, 153);
+}

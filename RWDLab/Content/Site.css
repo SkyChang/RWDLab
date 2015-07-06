@@ -1,0 +1,62 @@
+﻿@media screen and (min-width: 1200px) {
+    body {
+        /*padding-top: 50px;*/
+        padding-bottom: 20px;
+        padding-top:var(--defaultPadingTop);
+        /*運算*/
+        padding-top:calc(var(--defaultPadingTop) * 2);
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 979px) {
+    /* 768 ~ 979 間 */
+}
+
+@media screen and (max-width: 767px) {
+    /*如果使用者之視窗寬度 <= 768px，將會再載入這裡的 CSS。   */ 
+}
+
+@media screen and (max-device-width: 480px) {
+    /* 如果使用者之裝置寬度 <= 480px，將會再載入這裡的 CSS。 */
+}
+
+/*設定變數*/
+:root {
+  --defaultPadingTop: 50px;
+}
+/*設定media*/
+@custom-media --default-viewport (min-width: 1200px);
+
+@media screen and (--default-viewport) {
+    body {
+        /*padding-top: 50px;*/
+        padding-bottom: 20px;
+        padding-top:var(--defaultPadingTop);
+        /*運算*/
+        padding-top:calc(var(--defaultPadingTop) * 3);
+    }
+}
+
+@media (width >= 786px) and (width <= 979px) {
+  body {
+        /*padding-top: 50px;*/
+        padding-bottom: 20px;
+        padding-top:var(--defaultPadingTop);
+        /*運算*/
+        padding-top:calc(var(--defaultPadingTop) * 30);
+    }
+}
+
+/*自訂選擇器*/
+@custom-selector :--customBody body;
+
+:--customBody {
+   color:red;
+   color:color(red alpha(-10%));
+   color: color(red blackness(80%));
+   color: hwb(90, 0%, 0%, 0.5);
+   color: gray(85);
+   color: gray(10%, 50%);
+   color: #9d9c; /*RRGGBBAA*/
+   color: rebeccapurple;
+}

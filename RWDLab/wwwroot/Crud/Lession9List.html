@@ -1,0 +1,16 @@
+﻿<table class="table table-striped">
+    <thead>
+        <tr>
+            <td>LastName</td>
+            <td>FirstName</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="emp in emps">
+            <td>{{emp.lastName}}</td>
+            <td>{{emp.firstName}}</td>
+            <td><button type="button" class="btn btn-link" ng-click="edit(emp)">修改</button></td>
+            <td><button type="button" class="btn btn-link" ng-click="del(emp)">刪除</button></td>
+        </tr>
+    </tbody>
+</table>

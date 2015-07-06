@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AngularJS CRUD Demo</title>
+</head>
+<body>
+    <!-- 主要區塊 -->
+    <div>
+        <h2>Customer 增加 AngularJS</h2>
+        <div ng-app="hrApp">
+
+            <a href="#/list">列表</a>
+            <a href="#/add">新增</a>
+
+            <div ui-view>
+
+            </div>
+
+        </div>
+    </div>
+    <script src="/Scripts/angular.js"></script>
+    <script src="/Scripts/angular-ui-router.min.js"></script>
+    <script src="/Scripts/app/emp8/app.js"></script>
+    <script src="/Scripts/app/emp8/controllers/employeesController.js"></script>
+    <script src="/Scripts/app/emp8/controllers/employeesFormController.js"></script>
+    <script src="/Scripts/app/emp8/services/empService.js"></script>
+    <script src="/Scripts/app/emp8/directives/empForms.js"></script>
+</body>
+</html>
